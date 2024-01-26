@@ -45,5 +45,5 @@ Users should be able to:
 ### What I learned
 
 This was actually my first time using Formik, and a first time too with a form that consequent.
-Even though i couldn't manage to use the Formik built-in for errors message display and add to create my own system for it, Formik
+Even though i couldn't manage to use the Formik built-in for errors message display and had to create my own system for it, Formik
 was actually great to use for handling form
