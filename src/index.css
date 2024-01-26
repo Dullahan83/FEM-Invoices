@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body,
+#root {
+    width: 100%;
+    height: fit-content;
+    min-height: 100vh;
+    font-family: 'League Spartan', sans-serif;
+}
+
+::before,
+::after,
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.MenuItem input[type='checkbox'] {
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border: 1px solid transparent;
+    position: relative;
+    background-color: #dfe3fa;
+}
+
+.dark .MenuItem input[type='checkbox'] {
+    background-color: #1e2139;
+}
+
+.MenuItem input[type='checkbox']:hover {
+    border-color: #7c5dfa;
+}
+
+.MenuItem input[type='checkbox']::after {
+    content: url('/assets/icon-check.svg');
+    width: calc(100% + 2px);
+    height: calc(100% + 2px);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background-color: #7c5dfa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.1s ease-in-out;
+    transform-origin: 50% 50%;
+}
+
+.MenuItem input[type='checkbox']:checked::after {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+form input {
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 15px;
+    letter-spacing: -0.25px;
+}
+
+form label {
+    font-size: 13px;
+    line-height: 15px;
+    letter-spacing: -0.1px;
+}
+
+form div::-webkit-scrollbar {
+    width: 8px; /* Largeur de la barre de défilement */
+    background-color: transparent; /* Couleur de fond de la barre de défilement */
+    height: 100%;
+}
+
+form div::-webkit-scrollbar-track {
+    border-radius: 4px; /* Rayon de la bordure de la piste */
+    background: transparent; /* Couleur de fond de la piste */
+}
+
+form div::-webkit-scrollbar-thumb {
+    border-radius: 4px; /* Rayon de la bordure de la poignée */
+    background: #dfe3fa; /* Couleur de la poignée */
+    flex-shrink: 0; /* Empêche la réduction de taille */
+}
+
+.dark form div::-webkit-scrollbar-thumb {
+    background: #252945; /* Couleur de la poignée */
+}
+
+form div::-webkit-scrollbar-thumb:hover {
+    cursor: grab;
+}
+
+form div {
+    scrollbar-width: thin; /* Épaisseur de la barre de défilement */
+    scrollbar-color: #dfe3fa transparent; /* Couleur de la poignée et couleur de la piste */
+}
+
+.dark form div {
+    scrollbar-color: #252945 transparent; /* Couleur de la poignée et couleur de la piste */
+}
